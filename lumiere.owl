@@ -1,0 +1,1544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.smacrs.com/lumiere.owl#"
+     xml:base="http://www.smacrs.com/lumiere.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.smacrs.com/lumiere.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.smacrs.com/lumiere.owl#contains">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.smacrs.com/lumiere.owl#has">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <rdfs:range rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Aggregation_Level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Aggregation_Level">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Annotation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Annotation">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Annotation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Code">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Cognitive_Domain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Cognitive_Domain">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">analyzing</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">applying</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creating</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evaluating</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remembering</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">understanding</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Cognitive_Strategy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Cognitive_Strategy">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guessing meaning from context</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organizing new language</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repetition</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">summarizing meaning</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">using imagery for memorization</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Context -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Context">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">higher education</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">training</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Contribute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Contribute">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lifecycle"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Metadata"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contentProvider</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editor</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">educationalValidator</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graphicalDesigner</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiator</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instructionalDesigner</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scriptWriter</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subjectMatterExpert</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technicalImplementer</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technicalValidator</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terminator</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">validator</rdf:first>
+                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Copyright -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Copyright">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Rights"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Cost">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Rights"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Coverage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Coverage">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Description">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Rights"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Difficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Difficulty">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">difficult</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">easy</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very difficult</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very easy</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Duration">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Format">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">docx</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pdf</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pptx</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">video</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Identifier">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Metadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Installation_Remarks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Installation_Remarks">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Intended_End_User_Role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Intended_End_User_Role">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">learner</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teacher</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Interactivity_Level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Interactivity_Level">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Interactivity_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Interactivity_Type">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expositive</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mixed</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Keyword">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Language">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Metadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Learning_Resource_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Learning_Resource_Type">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diagram</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exam</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exercise</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experiment</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">figure</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graph</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">index</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lecture</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrative text</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">problem statement</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">questionnaire</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">self-assessment</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simulation</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slide</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">table</rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Location">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Metadata_Scheme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Metadata_Scheme">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Metadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Name">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Other_Platform_Requirements -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Other_Platform_Requirements">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Relation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Relation">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Relation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFormat</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasPart</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasVersion</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isBasisFor</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isFormatOf</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPartOf</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isReferencedBy</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isReplacedBy</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isRequiredBy</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isVersionOf</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">references</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replaces</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires</rdf:first>
+                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Requirements -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Requirements">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">browser</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maximumVersion</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimumVersion</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operatingSystem</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Semantic_Density -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Semantic_Density">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Size">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Technical"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Status">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lifecycle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Structure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Structure">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atomic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hierarchical</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">linear</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">networked</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Title">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#General"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Typical_Age_Range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Typical_Age_Range">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Typical_Learning_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Typical_Learning_Time">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Educational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.smacrs.com/lumiere.owl#Version">
+        <rdfs:domain rdf:resource="http://www.smacrs.com/lumiere.owl#Lifecycle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Annotation -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Classification -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Classification">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Course -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Course"/>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Educational -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Educational">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#General -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#General">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#LOM -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#LOM"/>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Lesson -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Lifecycle -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Lifecycle">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Metadata -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Metadata">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Relation -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Relation">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Rights -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Rights">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Taxonomies -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Taxonomies">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Technical -->
+
+    <owl:Class rdf:about="http://www.smacrs.com/lumiere.owl#Technical">
+        <rdfs:subClassOf rdf:resource="http://www.smacrs.com/lumiere.owl#LOM"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Abstract_Classes -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Abstract_Classes">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Access_Modifiers -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Access_Modifiers">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Arrays -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Arrays">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to use two dimensional array</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrays</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Arrays_of_Strings -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Arrays_of_Strings">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to create arrays of Strings</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrays of Strings</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#CS-Java -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#CS-Java">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Arrays"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Do_..._While"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Final"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#For_Loops"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Getting_User_Input"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Hello_World_Program"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#If_conditions"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Introduction_and_Installation"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Method_Parameters"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Methods"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Multi-Dimensional_Arrays"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Static"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#String_Builder_and_String_Formatting"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Switch"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Using_Variables"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#What_Java_Is_and_How_It_Works"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#While_Loops"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Strings:_Working_With_Text"/>
+        <Code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS102</Code>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">This course of study builds on the skills gained by students in Java Fundamentals or Java Foundations to help advance Java programming skills. Students will design object-oriented applications with Java and will create Java programs using hands-on, engaging activities.</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Java Programming Language</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#CS-OOP -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#CS-OOP">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Course"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Abstract_Classes"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Access_Modifiers"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Casting"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Classes"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Comparable"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Constructors"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Creating_an_Object"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Defining_a_Class"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Encapsulation"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Inheritance"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Interfaces"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Members"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#OOP_Overview"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Overloading"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Overriding"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Package_import"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Packages"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Polymorphism"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#Procedures_versus_Objects"/>
+        <contains rdf:resource="http://www.smacrs.com/lumiere.owl#toString_and_equal_methods"/>
+        <Code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS101</Code>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">This course introduces the concepts of object-oriented programming to students with a background in the procedural paradigm. The course begins with a brief review of control structures and data types with emphasis on structured data types and array processing. It then moves on to introduce the object-oriented programming paradigm, focusing on the definition and use of classes along with the fundamentals of object-oriented design. Other topics include an overview of programming language principles, simple analysis of algorithms, basic searching and sorting techniques, event-driven programming, memory management and an introduction to software engineering issues.</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object Oriented Programming</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Casting -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Casting">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Classes -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Classes">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classes</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Comparable -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Comparable">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Constructors -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Constructors">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Creating_an_Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Creating_an_Object">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Defining_a_Class -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Defining_a_Class">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Do_..._While -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Do_..._While">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to use do while loop and in which cases</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do ... While</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Encapsulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Encapsulation">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Final -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Final">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#For_Loops -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#For_Loops">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to use for loop and multi for loops</Description>
+        <Metadata_Scheme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For Loops</Metadata_Scheme>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Getting_User_Input -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Getting_User_Input">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to get input from user and process it</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getting User Input</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Hello_World_Program -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Hello_World_Program">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">In this lesson we will learn how to build a simple java application that display &quot;Hello, World&quot; in console</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello World Program</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#If_conditions -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#If_conditions">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to use if condition</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If condition</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Inheritance -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Inheritance">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Interfaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Interfaces">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Introduction_and_Installation -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Introduction_and_Installation">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">In this lesson we aim to give a quick introduction about Java programing language and how to instal it in your machine</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction and Installation</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Members -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Members">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Method_Parameters -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Method_Parameters">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Methods -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Methods">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn ho to encabsulate our login in to methods</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Multi-Dimensional_Arrays -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Multi-Dimensional_Arrays">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to create multi dimensional arrays</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multi-Dimensional Arrays</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#OOP_Overview -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#OOP_Overview">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OOP Overview</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Overloading -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Overloading">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Overriding -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Overriding">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Package_import -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Package_import">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Packages -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Packages">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Polymorphism -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Polymorphism">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Procedures_versus_Objects -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Procedures_versus_Objects">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Static -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Static">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#String_Builder_and_String_Formatting -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#String_Builder_and_String_Formatting">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Switch">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to use switch case</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switch</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Using_Variables -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Using_Variables">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn different types of variables (int, float, long, char, string)</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using Variables</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#What_Java_Is_and_How_It_Works -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#What_Java_Is_and_How_It_Works">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">In this lesson we aim to define what is java and how to code run and converted from java source code into bytecode</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What Java Is and How It Works</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#While_Loops -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#While_Loops">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to create while loops</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While Loops</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#toString_and_equal_methods -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#toString_and_equal_methods">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smacrs.com/lumiere.owl#Strings:_Working_With_Text -->
+
+    <owl:NamedIndividual rdf:about="http://www.smacrs.com/lumiere.owl#Strings:_Working_With_Text">
+        <rdf:type rdf:resource="http://www.smacrs.com/lumiere.owl#Lesson"/>
+        <Description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">in this lesson we will learn how to work with strings</Description>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strings: Working With Text</Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
